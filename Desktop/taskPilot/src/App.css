@@ -1,0 +1,112 @@
+.logn {
+  background-color: white;
+  height: 755px;
+  width: 1578px;
+  overflow: hidden;
+}
+
+.anda1 {
+  height: 400px;
+  width: 400px;
+  background-color: #ed6f46;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 60px;
+  left: -20px;
+  overflow: hidden;
+  filter: blur(10px);
+  animation: andaani 6s linear 2s infinite alternate;
+}
+
+.anda2 {
+  height: 300px;
+  width: 300px;
+  background-color: #ed6f46;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 335px;
+  left: -50px;
+  overflow: hidden;
+  filter: blur(10px);
+  animation: andaani 6s ease-in-out 1s infinite alternate;
+}
+
+.anda3 {
+  height: 500px;
+  width: 500px;
+  background-color: #ed6f46;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50px;
+  left: -10px;
+  overflow: hidden;
+  filter: blur(10px);
+  animation: andaani 5s ease-in 1s infinite alternate;
+}
+
+.anda4 {
+  height: 450px;
+  width: 450px;
+  background-color: #ed6f46;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  left: -150px;
+  overflow: hidden;
+  filter: blur(15px);
+  animation: andaani 8s linear 1s infinite alternate;
+}
+
+@keyframes andaani {
+  from {
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateX(59px);
+  }
+}
+
+.logn2 {
+  height: 300px;
+  width: 250px;
+  background-color: transparent;
+  position: absolute;
+  top: 30%;
+  right: 25%;
+
+}
+
+.logn2 input {
+  height: 100px;
+  width: 500px;
+  font-size: 25px;
+  border: transparent;
+  border-bottom: 2px solid #ed6f46;
+  border-radius: 11px;
+  margin: 20px;
+  color: #ed6f46;
+  outline: none;
+  margin: 10px;
+}
+
+.logn2 button {
+  height: 70px;
+  width: 159px;
+  font-size: 25px;
+  background-color: #ed6f46;
+  border-bottom: 2px solid #ed6f46;
+  border-radius: 11px;
+  margin-top: 70px;
+  margin-left: 195px;
+  color: white;
+}
+
+.logn p {
+  font-size: 50px;
+  position: relative;
+  left: 70%;
+  margin-bottom: 30px;
+  color: #ed6f46;
+}
