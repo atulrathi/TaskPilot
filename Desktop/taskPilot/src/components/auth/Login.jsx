@@ -1,9 +1,37 @@
-import React, { useState } from 'react';
+import gsap from 'gsap';
+import React, { useEffect, useState } from 'react';
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
 
 function Login({ handlogin }) {
 
   const [email, setemail] = useState('')
-  const [password, setpass] = useState('')
+  const [password, setpass] = useState('');
+
+  useGSAP(() => {
+    gsap.from("form", {
+      opacity: 0,
+      y: 20,
+      duration: 0.6,
+      delay: 0.2,
+      stagger: 1,
+    })
+  }, [])
+  useGSAP(() => {
+    gsap.from(".phera", {
+      opacity: 0,
+      y: -50,
+      duration: 0.6,
+      delay: 0.5,
+    })
+  }, [])
+  // useGSAP(() => {
+  //   gsap.from(".loginbtn", {
+  //     rotate: 360,
+  //     duration: 0.7,
+  //     delay: 1,
+  //   })
+  // }, []);
 
   const submitHandler = (e) => {
     e.preventDefault()
@@ -18,7 +46,7 @@ function Login({ handlogin }) {
       <div className="anda3"></div>
       <div className="anda4"></div>
       <div className='logn2'>
-        <p>Log in </p>
+        <p className='phera'>Log in </p>
         <form
           onSubmit={(e) => { submitHandler(e) }} >
           <input value={email}

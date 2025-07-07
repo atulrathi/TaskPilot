@@ -1,6 +1,16 @@
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import React from 'react';
-function Failed({data}) {
-  return (   <div className='flex-shrink-0 h-full w-[300px] p-5 bg-green-400 rounded-xl '>
+function Failed({ data }) {
+  useGSAP(() => {
+    gsap.from("#failed", {
+      opacity: 0,
+      y: -10,
+      duration: 0.6,
+      delay: 0.6,
+    })
+  }, [])
+  return (<div id='failed' className='flex-shrink-0 h-full w-[300px] p-5 bg-green-400 rounded-xl '>
     <div className='flex justify-between items-center text-sm'>
       <h3 className=' bg-red-600 px-3 py-1 rounded text-white'>{data.category}</h3>
       <h4 className='text-sm'>{data.date}</h4>
@@ -10,7 +20,7 @@ function Failed({data}) {
     <div className='mt-2'>
       <button className='w-full bg-red-400'>Failed </button>
     </div>
-  </div> );
+  </div>);
 }
 
 export default Failed;

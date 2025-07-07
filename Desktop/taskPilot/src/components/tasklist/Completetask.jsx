@@ -1,6 +1,16 @@
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import React from 'react';
-function Complete({data}) {
-  return (   <div className='flex-shrink-0 h-full w-[300px] p-5 bg-pink-400 rounded-xl '>
+function Complete({ data }) {
+  useGSAP(() => {
+    gsap.from("#complete", {
+      opacity: 0,
+      y: -10,
+      duration: 0.6,
+      delay: 0.6,
+    })
+  }, [])
+  return (<div id='complete' className='flex-shrink-0 h-full w-[300px] p-5 bg-pink-400 rounded-xl '>
     <div className='flex justify-between items-center text-sm'>
       <h3 className=' bg-red-600 px-3 py-1 rounded text-white'>{data.category}</h3>
       <h4 className='text-sm'>{data.date}</h4>
@@ -10,7 +20,7 @@ function Complete({data}) {
     <div className='mt-2'>
       <button className='w-full bg-green-500'>Completed</button>
     </div>
-  </div> );
+  </div>);
 }
 
 export default Complete;

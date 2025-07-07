@@ -1,3 +1,9 @@
+const admin = {
+  "id": "admin001",
+  "firstname": "Atul Rathi",
+  'email': "admin@example.com",
+  "password": "123"
+}
 const employees = [
   {
     "id": 1,
@@ -6,8 +12,18 @@ const employees = [
     "password": "123",
     "tasks": [
       {
-        "active": true,
+        "active": false,
         "new_task": true,
+        "complete": false,
+        "failed": false,
+        "title": "Prepare Sales Report",
+        "description": "Compile the sales data for Q1 and format it for review.",
+        "date": "2025-05-01",
+        "category": "Reporting"
+      },
+      {
+        "active": true,
+        "new_task": false,
         "complete": false,
         "failed": false,
         "title": "Prepare Sales Report",
@@ -38,9 +54,9 @@ const employees = [
     ],
     "task_count": {
       "active": 1,
-      "new_task": 0,
-      "complete": 2,
-      "failed": 4
+      "new_task": 1,
+      "complete": 1,
+      "failed": 1
     }
   },
   {
@@ -50,8 +66,18 @@ const employees = [
     "password": "123",
     "tasks": [
       {
-        "active": true,
+        "active": false,
         "new_task": true,
+        "complete": false,
+        "failed": false,
+        "title": "Client Follow-up",
+        "description": "Follow up with clients who attended last week's demo.",
+        "date": "2025-05-02",
+        "category": "Customer Service"
+      },
+      {
+        "active": true,
+        "new_task": false,
         "complete": false,
         "failed": false,
         "title": "Client Follow-up",
@@ -94,8 +120,18 @@ const employees = [
     "password": "123",
     "tasks": [
       {
-        "active": true,
+        "active": false,
         "new_task": true,
+        "complete": false,
+        "failed": false,
+        "title": "Design Mockups",
+        "description": "Create UI mockups for the upcoming client dashboard.",
+        "date": "2025-05-03",
+        "category": "Design"
+      },
+      {
+        "active": true,
+        "new_task": false,
         "complete": false,
         "failed": false,
         "title": "Design Mockups",
@@ -125,10 +161,10 @@ const employees = [
       }
     ],
     "task_count": {
-      "active": 4,
-      "new_task": 5,
-      "complete": 3,
-      "failed": 3
+      "active": 1,
+      "new_task": 1,
+      "complete": 1,
+      "failed": 1
     }
   },
   {
@@ -138,8 +174,18 @@ const employees = [
     "password": "123",
     "tasks": [
       {
-        "active": true,
+        "active": false,
         "new_task": true,
+        "complete": false,
+        "failed": false,
+        "title": "Write Blog Post",
+        "description": "Draft a blog post about new features in the product.",
+        "date": "2025-05-01",
+        "category": "Marketing"
+      },
+      {
+        "active": true,
+        "new_task": false,
         "complete": false,
         "failed": false,
         "title": "Write Blog Post",
@@ -170,9 +216,9 @@ const employees = [
     ],
     "task_count": {
       "active": 1,
-      "new_task": 0,
-      "complete": 0,
-      "failed": 2
+      "new_task": 1,
+      "complete": 1,
+      "failed": 1
     }
   },
   {
@@ -199,6 +245,16 @@ const employees = [
       },
       {
         "active": false,
+        "new_task": true,
+        "complete": false,
+        "failed": false,
+        "title": "Onboarding Checklist",
+        "description": "Complete onboarding checklist for new hire.",
+        "date": "2025-04-30",
+        "category": "HR"
+      },
+      {
+        "active": false,
         "new_task": false,
         "complete": true,
         "failed": false,
@@ -216,28 +272,28 @@ const employees = [
         "description": "Update employee handbook with latest remote work policy.",
         "date": "2025-04-28",
         "category": "HR"
-      }
+      },
+
     ],
+    "task_count": {
+      "active": 1,
+      "new_task": 1,
+      "complete": 1,
+      "failed": 1
+    }
   }
 ];
- 
 
 
-const admin={
-   
-    "id": "admin001",
-    "firstname": "Atul Rathi",
-    'email':"admin@example.com",
-    "password": "123"
-  
+
+
+
+export const setLocalstorage = () => {
+  localStorage.setItem('employees', JSON.stringify(employees))
+  localStorage.setItem('admin', JSON.stringify(admin))
 }
-
-export const setLocalstorage=()=>{
-  localStorage.setItem('employees',JSON.stringify(employees))
-  localStorage.setItem('admin',JSON.stringify(admin))
-}
-export const getLocalstorage=()=>{
- const employees= JSON.parse(localStorage.getItem('employees'))
- const admin= JSON.parse(localStorage.getItem('admin'))
- return{employees,admin}
+export const getLocalstorage = () => {
+  const employees = JSON.parse(localStorage.getItem('employees'))
+  const admin = JSON.parse(localStorage.getItem('admin'))
+  return { employees, admin }
 }
