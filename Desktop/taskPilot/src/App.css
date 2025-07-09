@@ -8,7 +8,7 @@
 .anda1 {
   height: 400px;
   width: 400px;
-  background-color: #ed6f46;
+  /* background-color: #ed6f46; */
   border-radius: 50%;
   position: absolute;
   bottom: 60px;
@@ -21,7 +21,7 @@
 .anda2 {
   height: 300px;
   width: 300px;
-  background-color: #ed6f46;
+  /* background-color: #ed6f46; */
   border-radius: 50%;
   position: absolute;
   bottom: 335px;
@@ -34,7 +34,7 @@
 .anda3 {
   height: 500px;
   width: 500px;
-  background-color: #ed6f46;
+  /* background-color: #ed6f46; */
   border-radius: 50%;
   position: absolute;
   bottom: 50px;
@@ -47,7 +47,7 @@
 .anda4 {
   height: 450px;
   width: 450px;
-  background-color: #ed6f46;
+  /* background-color: #ed6f46; */
   border-radius: 50%;
   position: absolute;
   bottom: 0px;

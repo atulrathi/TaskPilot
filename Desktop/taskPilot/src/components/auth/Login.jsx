@@ -25,13 +25,16 @@ function Login({ handlogin }) {
       delay: 0.5,
     })
   }, [])
-  // useGSAP(() => {
-  //   gsap.from(".loginbtn", {
-  //     rotate: 360,
-  //     duration: 0.7,
-  //     delay: 1,
-  //   })
-  // }, []);
+  useGSAP(() => {
+    gsap.to("#anda", {
+      backgroundImage: "linear-gradient(135deg,#ff9a9e,#eaafc8)",
+      duration: 15,
+      scale: 0.9,
+      repeat: -1,
+      yoyo: true,
+    })
+  }, [])
+
 
   const submitHandler = (e) => {
     e.preventDefault()
@@ -41,10 +44,10 @@ function Login({ handlogin }) {
   }
   return (
     <div className='logn '>
-      <div className="anda1"></div>
-      <div className="anda2"></div>
-      <div className="anda3"></div>
-      <div className="anda4"></div>
+      <div id='anda' className="anda1"></div>
+      <div id='anda' className="anda2"></div>
+      <div id='anda' className="anda3"></div>
+      <div id='anda' className="anda4"></div>
       <div className='logn2'>
         <p className='phera'>Log in </p>
         <form
